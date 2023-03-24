@@ -1,6 +1,7 @@
 import { React } from 'react'
 import GlobalStyle from './styles';
 import styled from 'styled-components'
+import { Navbar } from './components/Navbar/index'
 
 const AppStyled = styled.div`
   width: 100vw;
@@ -10,8 +11,8 @@ const AppStyled = styled.div`
 const Container = styled.div`
   background: var(--bg-main);
   width: ${props => props.maxBoxWidth ? 'var(--box-width-max)' : '100%'};
-  padding-right: var(--paddingX);
-  padding-left: var(--paddingX);
+  padding-right: var(--padding-3);
+  padding-left: var(--padding-3);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,7 +26,7 @@ function App() {
       {/* Navbar */}
       <Container>
         <Container maxBoxWidth>
-          
+          <Navbar />
         </Container>
       </Container>
 
