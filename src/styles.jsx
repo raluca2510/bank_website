@@ -2,13 +2,18 @@ import { createGlobalStyle } from "styled-components";
 
 export default createGlobalStyle`
 :root {
-    --black-gradient: linear-gradient(
-        144.39deg,
-        #ffffff -278.56%,
-        #6d6d6d -78.47%,
-        #11101d 91.61%
+        // Gradients
+        --bg-black-gradient: linear-gradient(
+            144.39deg,
+            #ffffff -278.56%,
+            #6d6d6d -78.47%,
+            #11101d 91.61%
         );
+
+        // Shadow
         --card-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
+
+        // Font family
         --font-family: 'Poppins', sans-serif;
         
         // Padding
@@ -18,6 +23,9 @@ export default createGlobalStyle`
         --paddingY-sm: 1rem;
         --padding: 0.4rem;
         --padding-sm: 1rem;
+
+        --padding-2: 1.5rem;
+        --padding-3: 2rem;
         
         // Margin
         --marginX: 0.4rem;
