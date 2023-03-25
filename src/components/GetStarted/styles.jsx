@@ -45,4 +45,6 @@ export const Span = styled.span`
   display: flex;
   align-items: center;
   gap: 3px;
+  font-size: 1rem;
+  max-height: 1.5rem;
 `;

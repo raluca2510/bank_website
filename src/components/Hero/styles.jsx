@@ -5,9 +5,9 @@ export const HeroStyled = styled.section`
   flex-direction: column;
   padding: var(--padding-2) 0;
 
-  // @media (min-width: 768px) {
-  //     flex-direction: row;
-  // }
+  @media (min-width: 1024px) {
+    flex-direction: row;
+  }
 `;
 
 export const HeroText = styled.div`
@@ -16,7 +16,11 @@ export const HeroText = styled.div`
   flex: 1;
   justify-content: center;
   align-items: flex-start;
-  padding: 0 var(--padding-3);
+  padding-right: var(--padding-3);
+
+  @media (min-width: 1280px) {
+    padding: 0;
+  }
 `;
 
 export const Discount = styled.div`
@@ -59,16 +63,42 @@ export const Heading = styled.h1`
   font-size: 3.25rem;
   color: var(--text-white);
   line-height: 4.7rem;
+  flex: ${(props) => props.flex};
+
+  @media (min-width: 640px) {
+    font-size: 4.4rem;
+    line-height: 6rem;
+  }
+
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 export const Description = styled.p`
   margin-top: var(--margin-2);
   font-size: var(--p-font-size);
   line-height: var(--p-line-height);
+  max-width: 470px;
 `;
 
-export const CallToAction = styled.div`
-    align-self: center;
+export const CallToActionMobile = styled.div`
+  align-self: center;
+  display: block;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+`;
+
+export const CallToActionDesktop = styled.div`
+  display: none;
+
+  @media (min-width: 768px) {
+    display: block;
+    max-height: 9rem;
+  }
 `;
 
 export const HeroImage = styled.div`
@@ -80,9 +110,9 @@ export const HeroImage = styled.div`
   margin: var(--margin-3) 0;
   position: relative;
 
-  // @media (min-width: 768px) {
-  //     margin: 0;
-  // }
+  @media (min-width: 1024px) {
+    margin: 0;
+  }
 `;
 
 export const Img = styled.img`
@@ -90,7 +120,7 @@ export const Img = styled.img`
   height: 100%;
   position: relative;
   z-index: 5;
-  object-fit: contain;
+  // object-fit: contain;
 `;
 
 export const Gradient = styled.div`
@@ -103,4 +133,11 @@ export const Gradient = styled.div`
   top: ${(props) => props.top};
   bottom: ${(props) => props.bottom};
   right: ${(props) => props.right};
+`;
+
+export const Container = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 `;

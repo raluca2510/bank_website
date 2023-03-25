@@ -54,9 +54,10 @@ export default createGlobalStyle`
 
         --blue-gradient: linear-gradient(180deg, rgba(188, 165, 255, 0) 0%, #214d76 100%);
           
-        --pink-gradient: linear-gradient(90deg, #f4c4f3 0%, #fc67fa 100%);
+        --pink-gradient: linear-gradient(90deg, rgb(244, 195, 243) 0%, rgba(252, 103, 250, 0.5) 100%);
 
-        --white-gradient: rgba(255, 255, 255, 0.6);
+        // --white-gradient: rgba(255, 255, 255, 0.3);
+        --white-gradient: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.5) 100%);
 
         // Shadow
         --card-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
@@ -126,6 +127,6 @@ export default createGlobalStyle`
         padding: 0;
         font-family: var(--font-family);
         color: var(--text-dimwhite);
-        // overflow: hidden;
+        // overflow-x: hidden;
     }
 `;
