@@ -1,5 +1,6 @@
 import React from "react";
 import { discount, robot } from "../../assets";
+import GetStarted from "../GetStarted/index";
 import * as H from './styles'
 
 
@@ -32,7 +33,9 @@ const Hero = () => {
             <H.Gradient backgroundColor='var(--blue-gradient)' w='50%' h='50%' bottom='5rem' right='5rem' zIndex='0' blur='750px' />
         </H.HeroImage>
 
-        <H.CallToAction></H.CallToAction>
+        <H.CallToAction>
+            <GetStarted />
+        </H.CallToAction>
     </H.HeroStyled>
   )
 };

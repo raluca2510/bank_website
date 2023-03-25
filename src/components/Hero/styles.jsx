@@ -67,11 +67,14 @@ export const Description = styled.p`
   line-height: var(--p-line-height);
 `;
 
-export const CallToAction = styled.div``;
+export const CallToAction = styled.div`
+    align-self: center;
+`;
 
 export const HeroImage = styled.div`
   display: flex;
   flex: 1;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: var(--margin-3) 0;
