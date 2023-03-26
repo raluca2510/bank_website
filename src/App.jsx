@@ -7,7 +7,9 @@ import Stats from "./components/Stats";
 import { BusinessSection } from "./components/BusinessSection";
 import { navLinks, features } from "./constants";
 import { apple, bill, card, google } from "./assets";
-import Testimonials from "./components/Testimonials";
+import { Testimonials } from "./components/Testimonials";
+import { Clients } from "./components/Clients";
+import CTA from "./components/CTA";
 
 const AppStyled = styled.div`
   width: 100vw;
@@ -83,6 +85,8 @@ function App() {
             image={card}
           />
           <Testimonials />
+          <Clients />
+          <CTA />
         </Container>
       </Container>
     </AppStyled>
