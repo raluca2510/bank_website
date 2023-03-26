@@ -45,7 +45,7 @@ const Navbar = () => {
                                 marginRight={idx !== navLinks.length - 1}
                                 onClick={() => setActive(navLink.title)}
                             >
-                                {navLink.title}
+                                <N.Link href={`#${navLink.id}`}>{navLink.title}</N.Link>
                             </N.NavLink>
                         ))}
                         </N.NavList>
