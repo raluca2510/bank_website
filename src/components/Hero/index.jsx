@@ -5,7 +5,6 @@ import * as H from "./styles";
 
 const Hero = () => {
   return (
-    // <p>j</p>
     <H.HeroStyled id="home">
       <H.HeroText>
         <H.Discount>

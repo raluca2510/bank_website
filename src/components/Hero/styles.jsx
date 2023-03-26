@@ -16,7 +16,7 @@ export const HeroText = styled.div`
   flex: 1;
   justify-content: center;
   align-items: flex-start;
-  padding-right: var(--padding-3);
+  padding: 0 var(--padding-3);
 
   @media (min-width: 1280px) {
     padding: 0;

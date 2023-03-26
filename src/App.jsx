@@ -3,6 +3,7 @@ import GlobalStyle from "./styles";
 import styled from "styled-components";
 import { Navbar } from "./components/Navbar/index";
 import { Hero } from "./components/Hero/index";
+import Stats from "./components/Stats";
 
 const AppStyled = styled.div`
   width: 100vw;
@@ -39,7 +40,7 @@ function App() {
       </Container>
 
       {/* Hero */}
-      <Container paddingLeft>
+      <Container>
         <Container maxBoxWidth>
           <Hero />
         </Container>
@@ -47,7 +48,9 @@ function App() {
 
       {/* Main */}
       <Container>
-        <Container maxBoxWidth></Container>
+        <Container maxBoxWidth>
+          <Stats />
+        </Container>
       </Container>
     </AppStyled>
   );
