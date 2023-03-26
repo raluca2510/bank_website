@@ -55,5 +55,6 @@ export const StatTitle = styled.p`
     font-size: 1.25rem;
     line-height: 2rem;
     margin-left: 0;
+    text-align: center;
   }
 `;
