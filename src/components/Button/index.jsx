@@ -5,4 +5,4 @@ const Button = ({ value }) => {
   return <ButtonStyled>{value}</ButtonStyled>;
 };
 
-export default Button;
+export { Button };
