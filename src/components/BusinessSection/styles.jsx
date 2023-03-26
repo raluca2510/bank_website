@@ -63,10 +63,7 @@ export const ImageContainer = styled.div`
     justify-content: center;
     align-items: center;
     gap: var(--margin-2);
-
-    @media (min-width: 768px) {
-        // margin-left: var(--margin-3);
-    }
+    position: relative;
 `
 
 export const Image = styled.img.attrs(props => ({
@@ -77,4 +74,18 @@ export const Image = styled.img.attrs(props => ({
     height: 100%;
     position: relative;
     object-fit: contain;
+    z-index: 5;
+`
+
+export const Gradient = styled.div`
+    position: absolute;
+    background: ${props => props.background};
+    z-index: ${props => props.z};
+    left: -50%;
+    filter: blur(1000px);
+    width: ${props => props.w};
+    height: ${props => props.h};
+    border-radius: 99999px;
+    top: ${props => props.t};
+    bottom: ${props => props.b};
 `

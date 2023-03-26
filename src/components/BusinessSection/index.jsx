@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "../Button/index";
-import * as B from './styles'
-import { FeatureCard } from '../FeatureCard/index'
+import * as B from "./styles";
+import { FeatureCard } from "../FeatureCard/index";
 
 const BusinessSection = ({
   id,
@@ -13,6 +13,8 @@ const BusinessSection = ({
   image,
   img1,
   img2,
+  gradient1,
+  gradient2,
 }) => {
   return (
     <B.BusinessSectionStyled id={id} direction={direction}>
@@ -29,8 +31,14 @@ const BusinessSection = ({
         {image && <B.Image src={image} alt={image} />}
         {features &&
           features.map((feature, idx) => (
-            <FeatureCard key={feature.id} {...feature} marginBottom={idx !== features.length-1 ? 'var(margin-2)' : '0'} />
+            <FeatureCard
+              key={feature.id}
+              {...feature}
+              marginBottom={idx !== features.length - 1 ? "var(margin-2)" : "0"}
+            />
           ))}
+        <B.Gradient background={gradient1} z="0" w='60%' h='80%' t='0' />
+        <B.Gradient background={gradient2} z="3" bottom="0" w='40%' h='40%'  t='50%' />
       </B.ImageContainer>
     </B.BusinessSectionStyled>
   );

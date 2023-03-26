@@ -70,6 +70,8 @@ function App() {
             img2={apple}
             img1={google}
             image={bill}
+            gradient1='var(--blue-gradient)'
+            gradient2='var(--white-gradient)'
           />
           <BusinessSection
             id={navLinks[3].id}
