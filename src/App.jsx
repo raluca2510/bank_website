@@ -7,6 +7,7 @@ import Stats from "./components/Stats";
 import { BusinessSection } from "./components/BusinessSection";
 import { navLinks, features } from "./constants";
 import { apple, bill, card, google } from "./assets";
+import Testimonials from "./components/Testimonials";
 
 const AppStyled = styled.div`
   width: 100vw;
@@ -81,6 +82,7 @@ function App() {
             buttonValue='Get Started'
             image={card}
           />
+          <Testimonials />
         </Container>
       </Container>
     </AppStyled>
