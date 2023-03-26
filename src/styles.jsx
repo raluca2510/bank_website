@@ -87,6 +87,8 @@ export default createGlobalStyle`
 
         --margin-2: 1.5rem;
         --margin-3: 2rem;
+        --margin-4: 3rem;
+        --margin-5: 4rem;
         
         // Paragraph
         --p-font-size: 1.125rem;
