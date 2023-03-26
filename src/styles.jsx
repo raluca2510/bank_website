@@ -49,7 +49,7 @@ export default createGlobalStyle`
               rgba(255, 255, 255, 0) -341.94%,
               #14101d 95.11%
             );
-
+ 
         --bg-discount-gradient: linear-gradient(125.17deg, #272727 0%, #11101d 100%);
 
         --blue-gradient: linear-gradient(180deg, rgba(188, 165, 255, 0) 0%, #214d76 100%);
@@ -76,6 +76,7 @@ export default createGlobalStyle`
 
         --padding-2: 1.5rem;
         --padding-3: 2rem;
+        --padding-4: 3rem;
         
         // Margin
         --marginX: 0.4rem;
