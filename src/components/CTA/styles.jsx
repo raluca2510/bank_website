@@ -7,7 +7,7 @@ export const CTAStyled = styled.section`
     justify-content: center;
     align-items: center;
     gap: var(--margin-4);
-    margin: var(--margin-5) 0;
+    margin: var(--margin-3) 0;
     padding: var(--padding-4) var(--padding-2);
     border-radius: 2rem;
     background: var(--bg-black-gradient-2);
@@ -16,6 +16,7 @@ export const CTAStyled = styled.section`
     @media (min-width: 768px) {
         flex-direction: row;
         padding: var(--padding-4);
+        margin-bottom: 6rem;
     }
 `
 

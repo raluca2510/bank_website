@@ -5,7 +5,11 @@ export const ClientsStyled = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: var(--margin-5) 0;
+  margin: var(--margin-3) 0;
+
+  @media (min-width: 768px) {
+    margin: var(--margin-5) 0;
+  }
 `;
 
 export const Container = styled.div`

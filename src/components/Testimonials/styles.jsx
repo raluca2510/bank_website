@@ -10,7 +10,7 @@ export const TestimonialsStyled = styled.section`
   z-index: 5;
 
   @media (min-width: 768px) {
-    margin: var(--margin-5);
+    margin-top: var(--margin-5);
   }
 `;
 
