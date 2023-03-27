@@ -36,7 +36,7 @@ export const Heading = styled.h2`
 export const Description = styled.p`
     font-size: var(--p-font-size);
     line-height: var(--p-line-height);
-    max-width: 470px;
+    max-width: 530px;
 `
 
 export const Span = styled.span`
