@@ -11,6 +11,8 @@ export const TestimonialCardStyled = styled.div`
   border-radius: 2rem;
   min-width: 370px;
   max-width: 370px;
+  position: relative;
+  z-index: 5;
 
   &:hover {
     background: var(--bg-black-gradient);

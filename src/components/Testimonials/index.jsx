@@ -6,6 +6,7 @@ import * as T from './styles'
 const Testimonials = () => {
   return (
     <T.TestimonialsStyled>
+      <T.Gradient />
       <T.Introduction>
         <T.Heading>What people are saying about us</T.Heading>
         <T.Container>
