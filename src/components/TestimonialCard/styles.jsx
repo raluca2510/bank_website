@@ -9,7 +9,7 @@ export const TestimonialCardStyled = styled.div`
   justify-content: space-between;
   gap: var(--margin-3);
   border-radius: 2rem;
-  min-width: 370px;
+  min-width: 30vw;
   max-width: 370px;
   position: relative;
   z-index: 5;
@@ -32,7 +32,7 @@ export const Text = styled.p`
   font-size: var(--p-font-size);
   line-height: var(--p-line-height);
   color: var(--text-white);
-  height: 6.25rem;
+  min-height: 6.25rem;
 `;
 
 export const Container = styled.div`
