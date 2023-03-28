@@ -5,14 +5,13 @@ export const Section = styled.section`
   display: flex;
   // flex-direction: column;
   align-items: center;
-  margin: var(--margin-3) 0;
+  margin: var(--margin-5) 0;
   flex-wrap: wrap;
   justify-content: space-around;
 
-  // @media (min-width: 640px) {
-  //   flex-direction: row;
-  //   flex-wrap: wrap;
-  // }
+  @media (min-width: 640px) {
+    margin: var(--margin-5) 0;
+  }
 `;
 
 export const Stat = styled.div`

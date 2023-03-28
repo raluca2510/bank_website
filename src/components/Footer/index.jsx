@@ -9,7 +9,9 @@ const Footer = () => (
     <F.WebsiteNav>
       <F.Company>
         <F.Logo src={logo} alt="logo" />
-        <F.Text>A new way to make the payments easy, reliable and secure.</F.Text>
+        <F.Text>
+          A new way to make the payments easy, reliable and secure.
+        </F.Text>
       </F.Company>
       <F.NavSections>
         {footerLinks.map((footerLink, idx) => (

@@ -24,8 +24,8 @@ export const IconContainer = styled.div`
 
 export const Icon = styled.img`
   width: 50%;
-  height: 50%
-`
+  height: 50%;
+`;
 
 export const TextContainer = styled.div`
   flex: 1;

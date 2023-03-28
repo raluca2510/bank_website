@@ -78,4 +78,4 @@ export const Gradient = styled.div`
   border-radius: 100%;
   background: var(--blue-gradient);
   filter: blur(500px);
-`
+`;

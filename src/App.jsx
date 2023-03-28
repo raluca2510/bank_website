@@ -32,9 +32,9 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: ${props => props.position};
-  top:0;
-  z-index: ${props => props.z};
+  position: ${(props) => props.position};
+  top: 0;
+  z-index: ${(props) => props.z};
   transition: all 0.3s ease-in;
 
   @media (min-width: 1280px) {
@@ -44,26 +44,24 @@ const Container = styled.div`
 `;
 
 function App() {
-
-  const [colorChange, setColorchange] = useState('none');
+  const [colorChange, setColorchange] = useState("none");
 
   // Change navbar color on scroll
-  const changeNavbarColor = () =>{
-     if(window.scrollY >= 1){
-       setColorchange('rgba(0, 4, 15, 0.5)');
-     }
-     else{
-       setColorchange('none');
-     }
+  const changeNavbarColor = () => {
+    if (window.scrollY >= 1) {
+      setColorchange("rgba(0, 4, 15, 0.5)");
+    } else {
+      setColorchange("none");
+    }
   };
-  window.addEventListener('scroll', changeNavbarColor);
+  window.addEventListener("scroll", changeNavbarColor);
 
   return (
     <AppStyled>
       <GlobalStyle />
 
       {/* Navbar */}
-      <Container background={colorChange} position='fixed' z='6'>
+      <Container background={colorChange} position="fixed" z="6">
         <Container background={colorChange} paddingLeft paddingRight>
           <Navbar />
         </Container>

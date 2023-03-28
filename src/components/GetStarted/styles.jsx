@@ -41,7 +41,6 @@ export const Circle = styled.div`
   }
 `;
 
-
 export const Span = styled.span`
   background: var(--text-gradient);
   background-clip: text;

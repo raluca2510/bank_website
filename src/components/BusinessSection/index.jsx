@@ -37,8 +37,15 @@ const BusinessSection = ({
               marginBottom={idx !== features.length - 1 ? "var(margin-2)" : "0"}
             />
           ))}
-        <B.Gradient background={gradient1} z="0" w='60%' h='80%' t='0' />
-        <B.Gradient background={gradient2} z="3" bottom="0" w='40%' h='40%'  t='50%' />
+        <B.Gradient background={gradient1} z="0" w="60%" h="80%" t="0" />
+        <B.Gradient
+          background={gradient2}
+          z="3"
+          bottom="0"
+          w="40%"
+          h="40%"
+          t="50%"
+        />
       </B.ImageContainer>
     </B.BusinessSectionStyled>
   );

@@ -1,7 +1,7 @@
 import React from "react";
 import { feedback } from "../../constants";
 import { TestimonialCard } from "../TestimonialCard/index";
-import * as T from './styles'
+import * as T from "./styles";
 
 const Testimonials = ({ id }) => {
   return (

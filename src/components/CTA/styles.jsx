@@ -18,34 +18,34 @@ export const CTAStyled = styled.section`
         padding: var(--padding-4);
         margin-bottom: 6rem;
     }
-`
+`;
 
 export const Content = styled.div`
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: var(--margin-sm);
-`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--margin-sm);
+`;
 
 export const Heading = styled.h2`
-    font-size: var(--h2-font-size);
-    line-height: var(--h2-line-height);
-    color: var(--text-white);
+  font-size: var(--h2-font-size);
+  line-height: var(--h2-line-height);
+  color: var(--text-white);
 
-    @media (min-width: 640px) {
-        font-size: var(--h2-font-size-sm);
+  @media (min-width: 640px) {
+    font-size: var(--h2-font-size-sm);
     line-height: var(--h2-line-height-sm);
-    }
-`
+  }
+`;
 
 export const Description = styled.p`
-    font-size: var(--p-font-size);
-    line-height: var(--p-line-height);
-    max-width: 470px;
-`
+  font-size: var(--p-font-size);
+  line-height: var(--p-line-height);
+  max-width: 470px;
+`;
 
 export const Container = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;

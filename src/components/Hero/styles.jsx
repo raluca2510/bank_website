@@ -134,7 +134,7 @@ export const Gradient = styled.div`
   top: ${(props) => props.top};
   bottom: ${(props) => props.bottom};
   right: ${(props) => props.right};
-  border-radius: ${props => props.borderRadius};
+  border-radius: ${(props) => props.borderRadius};
 `;
 
 export const Container = styled.div`

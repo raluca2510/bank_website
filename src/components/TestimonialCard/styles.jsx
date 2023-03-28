@@ -38,8 +38,8 @@ export const Text = styled.p`
 export const Container = styled.div`
   display: flex;
   flex-direction: ${(props) => props.direction};
-  gap: ${props => props.gap ? 'var(--margin-sm)' : '0'};
-  align-items: ${props => props.align};
+  gap: ${(props) => (props.gap ? "var(--margin-sm)" : "0")};
+  align-items: ${(props) => props.align};
 `;
 
 export const Picture = styled.img.attrs((props) => ({
