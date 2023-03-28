@@ -3,9 +3,9 @@ import { feedback } from "../../constants";
 import { TestimonialCard } from "../TestimonialCard/index";
 import * as T from './styles'
 
-const Testimonials = () => {
+const Testimonials = ({ id }) => {
   return (
-    <T.TestimonialsStyled>
+    <T.TestimonialsStyled id={id}>
       <T.Gradient />
       <T.Introduction>
         <T.Heading>What people are saying about us</T.Heading>
