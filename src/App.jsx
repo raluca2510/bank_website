@@ -118,6 +118,12 @@ function App() {
           <Footer />
         </Container>
       </Container>
+      <Circle2
+        color="#7de7eb"
+        background="var(--bg-main)"
+        animation="slide"
+        time={2000}
+      />
     </AppStyled>
   );
 }
