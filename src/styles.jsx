@@ -54,7 +54,7 @@ export default createGlobalStyle`
 
         --blue-gradient: linear-gradient(180deg, rgba(188, 165, 255, 0) 0%, #214d76 100%);
           
-        --pink-gradient: linear-gradient(90deg, rgb(244, 195, 243) 0%, rgba(252, 103, 250, 0.5) 100%);
+        --pink-gradient: linear-gradient(90deg, #f4c4f3 0%, #fc67fa 100%);
 
         // --white-gradient: rgba(255, 255, 255, 0.3);
         --white-gradient: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.5) 100%);
@@ -90,6 +90,7 @@ export default createGlobalStyle`
         --margin-3: 2rem;
         --margin-4: 3rem;
         --margin-5: 4rem;
+        --margin-6: 5rem;
         
         // Paragraph
         --p-font-size: 1.125rem;
@@ -131,5 +132,20 @@ export default createGlobalStyle`
         font-family: var(--font-family);
         color: var(--text-dimwhite);
         // overflow-x: hidden;
+
+    }
+
+    body::-webkit-scrollbar {
+        width: 14px;
+    }
+
+    body::-webkit-scrollbar-track {
+    background: var(--bg-main);        
+    }
+    
+    body::-webkit-scrollbar-thumb {
+    background: var(--bg-blue-gradient);    
+    border-radius: 20px;       
+    border: 3px solid #11101d;
     }
 `;
