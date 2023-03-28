@@ -19,4 +19,4 @@ const CTA = () => {
   );
 };
 
-export default CTA;
+export { CTA };
