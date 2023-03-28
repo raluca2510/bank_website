@@ -3,9 +3,14 @@ import { arrowUp } from "../../assets";
 import * as G from "./styles";
 
 const GetStarted = () => {
+  const handleCircleClick = () => {
+    const section = document.querySelector("#about-us");
+    section.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
   return (
     <G.OutlineCircle>
-      <G.Circle>
+      <G.Circle onClick={() => handleCircleClick()}>
         <G.Span>
           Get
           <G.Img src={arrowUp} alt="arrow" />

@@ -12,6 +12,15 @@ export const OutlineCircle = styled.div`
   }
 `;
 
+export const Img = styled.img.attrs((props) => ({
+  src: props.src,
+  alt: props.alt,
+}))`
+  width: 1.8rem;
+  height: 1.8rem;
+  transition: 0.4s;
+`;
+
 export const Circle = styled.div`
   width: 100%;
   height: 100%;
@@ -26,15 +35,12 @@ export const Circle = styled.div`
   &:hover {
     cursor: pointer;
   }
+
+  &:hover ${Img} {
+    transform: rotate(90deg);
+  }
 `;
 
-export const Img = styled.img.attrs((props) => ({
-  src: props.src,
-  alt: props.alt,
-}))`
-  width: 1.8rem;
-  height: 1.8rem;
-`;
 
 export const Span = styled.span`
   background: var(--text-gradient);
