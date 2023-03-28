@@ -9,6 +9,8 @@ export const TestimonialsStyled = styled.section`
   position: relative;
   z-index: 5;
 
+  scroll-margin-top: var(--margin-6);
+
   @media (min-width: 768px) {
     margin-top: var(--margin-5);
   }

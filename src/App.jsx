@@ -1,4 +1,4 @@
-import { React } from "react";
+import { React, useState } from "react";
 import GlobalStyle from "./styles";
 import styled from "styled-components";
 import { Navbar } from "./components/Navbar/index";
@@ -11,16 +11,20 @@ import { Testimonials } from "./components/Testimonials";
 import { Clients } from "./components/Clients";
 import CTA from "./components/CTA";
 import { Footer } from "./components/Footer";
+import { Circle2 } from "react-preloaders";
 
 const AppStyled = styled.div`
   width: 100vw;
   min-height: 100vh;
   overflow: hidden;
   max-width: 100%;
+  background: var(--bg-main);
+  padding-top: 5rem;
 `;
 
 const Container = styled.div`
-  background: ${props => props.background ? 'rgba(11, 10, 12, 0.6)' : 'var(--bg-main)'};
+  background: ${(props) =>
+    props.background ? props.background : "var(--bg-main)"};
   width: 100%;
   padding-right: ${(props) => (props.paddingRight ? "var(--padding-3)" : "0")};
   padding-left: ${(props) => (props.paddingLeft ? "var(--padding-3)" : "0")};
@@ -28,6 +32,10 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: ${props => props.position};
+  top:0;
+  z-index: ${props => props.z};
+  transition: all 0.3s ease-in;
 
   @media (min-width: 1280px) {
     max-width: ${(props) =>
@@ -36,13 +44,27 @@ const Container = styled.div`
 `;
 
 function App() {
+
+  const [colorChange, setColorchange] = useState('none');
+
+  // Change navbar color on scroll
+  const changeNavbarColor = () =>{
+     if(window.scrollY >= 1){
+       setColorchange('rgba(0, 4, 15, 0.5)');
+     }
+     else{
+       setColorchange('none');
+     }
+  };
+  window.addEventListener('scroll', changeNavbarColor);
+
   return (
     <AppStyled>
       <GlobalStyle />
 
       {/* Navbar */}
-      <Container paddingRight paddingLeft>
-        <Container maxBoxWidth>
+      <Container background={colorChange} position='fixed' z='6'>
+        <Container background={colorChange} paddingLeft paddingRight>
           <Navbar />
         </Container>
       </Container>
@@ -85,14 +107,14 @@ function App() {
             buttonValue="Get Started"
             image={card}
           />
-          <Testimonials />
+          <Testimonials id={navLinks[4].id} />
           <Clients />
           <CTA />
         </Container>
       </Container>
 
       <Container>
-        <Container background>
+        <Container background="rgba(11, 10, 12, 0.6)">
           <Footer />
         </Container>
       </Container>

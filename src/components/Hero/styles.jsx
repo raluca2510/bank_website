@@ -5,11 +5,12 @@ export const HeroStyled = styled.section`
   flex-direction: column;
   padding: var(--padding-2) 0;
 
+  scroll-margin-top: var(--margin-5);
+
   @media (min-width: 1024px) {
     flex-direction: row;
   }
 `;
-
 export const HeroText = styled.div`
   display: flex;
   flex-direction: column;
@@ -133,6 +134,7 @@ export const Gradient = styled.div`
   top: ${(props) => props.top};
   bottom: ${(props) => props.bottom};
   right: ${(props) => props.right};
+  border-radius: ${props => props.borderRadius};
 `;
 
 export const Container = styled.div`

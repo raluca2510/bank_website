@@ -6,6 +6,7 @@ export const Nav = styled.nav`
     justify-content: center;
     align-items: center;
     padding: var(--padding-2) 0;
+    max-width: var(--box-width-max);
 `
 
 export const Logo = styled.img.attrs((props) => ({
