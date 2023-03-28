@@ -12,37 +12,7 @@ import { Clients } from "./components/Clients";
 import { CTA } from "./components/CTA";
 import { Footer } from "./components/Footer";
 import Puffloader from "react-spinners/Puffloader";
-
-const AppStyled = styled.div`
-  width: 100vw;
-  min-height: 100vh;
-  overflow: hidden;
-  max-width: 100%;
-  background: var(--bg-main);
-  padding-top: 5rem;
-  position: relative;
-`;
-
-const Container = styled.div`
-  background: ${(props) =>
-    props.background ? props.background : "var(--bg-main)"};
-  width: 100%;
-  padding-right: ${(props) => (props.paddingRight ? "var(--padding-3)" : "0")};
-  padding-left: ${(props) => (props.paddingLeft ? "var(--padding-3)" : "0")};
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: ${(props) => props.position};
-  top: 0;
-  z-index: ${(props) => props.z};
-  transition: all 0.3s ease-in;
-
-  @media (min-width: 1280px) {
-    max-width: ${(props) =>
-      props.maxBoxWidth ? "var(--box-width-max)" : "100%"};
-  }
-`;
+import * as A from './App.styled'
 
 function App() {
   const [colorChange, setColorchange] = useState("none");
@@ -78,26 +48,26 @@ function App() {
       />
     </div>
   ) : (
-    <AppStyled>
+    <A.AppStyled>
       <GlobalStyle />
 
       {/* Navbar */}
-      <Container background={colorChange} position="fixed" z="6">
-        <Container background={colorChange} paddingLeft paddingRight>
+      <A.Container background={colorChange} position="fixed" z="6">
+        <A.Container background={colorChange} paddingLeft paddingRight>
           <Navbar />
-        </Container>
-      </Container>
+        </A.Container>
+      </A.Container>
 
       {/* Hero */}
-      <Container>
-        <Container maxBoxWidth>
+      <A.Container>
+        <A.Container maxBoxWidth>
           <Hero />
-        </Container>
-      </Container>
+        </A.Container>
+      </A.Container>
 
       {/* Main */}
-      <Container paddingLeft paddingRight>
-        <Container maxBoxWidth>
+      <A.Container paddingLeft paddingRight>
+        <A.Container maxBoxWidth>
           <Stats />
           <BusinessSection
             id={navLinks[1].id}
@@ -129,15 +99,15 @@ function App() {
           <Testimonials id={navLinks[4].id} />
           <Clients />
           <CTA />
-        </Container>
-      </Container>
+        </A.Container>
+      </A.Container>
 
-      <Container>
-        <Container background="rgba(11, 10, 12, 0.6)">
+      <A.Container>
+        <A.Container background="rgba(11, 10, 12, 0.6)">
           <Footer />
-        </Container>
-      </Container>
-    </AppStyled>
+        </A.Container>
+      </A.Container>
+    </A.AppStyled>
   );
 }
 
