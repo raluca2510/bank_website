@@ -1,17 +1,17 @@
-import { React, useState } from "react";
+import { React, useEffect, useState } from "react";
 import GlobalStyle from "./styles";
 import styled from "styled-components";
 import { Navbar } from "./components/Navbar/index";
 import { Hero } from "./components/Hero/index";
-import Stats from "./components/Stats";
+import { Stats } from "./components/Stats/index";
 import { BusinessSection } from "./components/BusinessSection";
 import { navLinks, features } from "./constants";
 import { apple, bill, card, google } from "./assets";
 import { Testimonials } from "./components/Testimonials";
 import { Clients } from "./components/Clients";
-import CTA from "./components/CTA";
+import { CTA } from "./components/CTA";
 import { Footer } from "./components/Footer";
-import { Circle2 } from "react-preloaders";
+import Puffloader from "react-spinners/Puffloader";
 
 const AppStyled = styled.div`
   width: 100vw;
@@ -20,6 +20,7 @@ const AppStyled = styled.div`
   max-width: 100%;
   background: var(--bg-main);
   padding-top: 5rem;
+  position: relative;
 `;
 
 const Container = styled.div`
@@ -56,7 +57,27 @@ function App() {
   };
   window.addEventListener("scroll", changeNavbarColor);
 
-  return (
+  // Loading state
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Wait for 3 seconds
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
+  }, []);
+
+  return isLoading ? (
+    // If page is still loading then splash screen
+    <div style={{ width: '100%', height: '95vh', display: 'grid', placeContent: 'center' }}>
+      <Puffloader
+        color={"#7de7eb"}
+        loading={isLoading}
+        size={75}
+        aria-label="Loading Spinner"
+      />
+    </div>
+  ) : (
     <AppStyled>
       <GlobalStyle />
 
@@ -116,12 +137,6 @@ function App() {
           <Footer />
         </Container>
       </Container>
-      <Circle2
-        color="#7de7eb"
-        background="var(--bg-main)"
-        animation="slide"
-        time={2000}
-      />
     </AppStyled>
   );
 }
