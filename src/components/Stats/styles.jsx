@@ -3,25 +3,27 @@ import styled from "styled-components";
 export const Section = styled.section`
   width: 100%;
   display: flex;
-  flex-direction: column;
+  // flex-direction: column;
   align-items: center;
   margin: var(--margin-3) 0;
+  flex-wrap: wrap;
+  justify-content: space-around;
 
-  @media (min-width: 640px) {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
+  // @media (min-width: 640px) {
+  //   flex-direction: row;
+  //   flex-wrap: wrap;
+  // }
 `;
 
 export const Stat = styled.div`
-  flex: 1;
+  // flex: 1;
   margin: var(--margin-sm);
   display: flex;
   align-items: center;
   max-width: 100%;
 
   @media (min-width: 640px) {
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
   }
@@ -55,6 +57,6 @@ export const StatTitle = styled.p`
     font-size: 1.25rem;
     line-height: 2rem;
     margin-left: 0;
-    text-align: center;
+    text-align: start;
   }
 `;
