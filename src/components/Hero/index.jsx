@@ -49,15 +49,16 @@ const Hero = () => {
           top="0"
           zIndex="0"
           blur="900px"
+          borderRadius="99999px"
         />
         <H.Gradient
           backgroundColor="var(--white-gradient)"
-          w="80%"
-          h="70%"
+          w="40%"
+          h="40%"
           bottom="10rem"
           zIndex="1"
           blur="123px"
-          borderRadius="99999px"
+          borderRadius="9999px"
         />
         <H.Gradient
           backgroundColor="var(--blue-gradient)"
@@ -67,6 +68,7 @@ const Hero = () => {
           right="5rem"
           zIndex="0"
           blur="750px"
+          borderRadius="99999px"
         />
       </H.HeroImage>
 
